@@ -11,6 +11,16 @@ async function animalsInfo(){
 
     let data = await response.json();
 
+    console.log(data.name)
+    console.log('length min', data.length_min)
+    console.log('length max', data.length_max)
+    console.log('weight min', data.weight_min)
+    console.log('weight max', data.weight_max)
+
+    let avgLength = ((+(data.length_min) + +(data.length_max))/2).toFixed(2)
+    let avgWeight = (+(data.weight_min) + +(data.weight_max))/2
+    avgWeight = (avgWeight/2.205).toFixed(2)
+
     info.innerHTML = `
     <!-- animals information start -->
     <div class="col-lg-7 col-sm-12">
@@ -33,11 +43,11 @@ async function animalsInfo(){
           </div>
           <div class="avg-length mb-sm-2">
             <small>AVG. LENGTH</small>
-            <p>${data.length_min} ft</p>
+            <p>${avgLength} ft</p>
           </div>
           <div class="avg-weight mb-sm-2">
             <small>AVG. WEIGHT</small>
-            <p>${data.weight_min} kg</p>
+            <p>${avgWeight} kg</p>
           </div>
         </div>
       </div>
