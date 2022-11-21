@@ -65,23 +65,23 @@ small {
 }
 
 @media screen and (max-width: 767px) {
-    h2{
-        font-size: 2rem;
-    }
+  h2 {
+    font-size: 2rem;
+  }
 
-    #info-row{
-        flex-direction: column;
-    }
+  #info-row {
+    flex-direction: column;
+  }
 
   .animal-type,
   .active-time,
   .avg-length,
   .avg-weight {
     width: 100%;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 
-  .animal-img{
+  .animal-img {
     margin-bottom: 1rem;
     order: -1;
   }
@@ -92,15 +92,15 @@ small {
 }
 
 @media screen and (min-width: 992px) {
-    .animal-img{
-        height: 452px;
-    }
+  .animal-img {
+    height: 452px;
+  }
 }
 
 @media screen and (min-width: 1199px) {
-    .animal-img{
-        height: 428px;
-    }
+  .animal-img {
+    height: 428px;
+  }
 }
 
 .animal-img img {

@@ -1,27 +1,27 @@
 //defining the targeted elements
-let nextBtn = document.getElementById('next-btn');
-let info = document.getElementById('info-container');
+let nextBtn = document.getElementById("next-btn");
+let info = document.getElementById("info-container");
 
-async function animalsInfo(){
-    let URL = 'https://zoo-animal-api.herokuapp.com/animals/rand'
+async function animalsInfo() {
+  let URL = "https://zoo-animal-api.herokuapp.com/animals/rand";
 
-    let response = await fetch(URL, {
-        method: 'GET',
-    })
+  let response = await fetch(URL, {
+    method: "GET",
+  });
 
-    let data = await response.json();
+  let data = await response.json();
 
-    console.log(data.name)
-    console.log('length min', data.length_min)
-    console.log('length max', data.length_max)
-    console.log('weight min', data.weight_min)
-    console.log('weight max', data.weight_max)
+  console.log(data.name);
+  console.log("length min", data.length_min);
+  console.log("length max", data.length_max);
+  console.log("weight min", data.weight_min);
+  console.log("weight max", data.weight_max);
 
-    let avgLength = ((+(data.length_min) + +(data.length_max))/2).toFixed(2)
-    let avgWeight = (+(data.weight_min) + +(data.weight_max))/2
-    avgWeight = (avgWeight/2.205).toFixed(2)
+  let avgLength = ((+data.length_min + +data.length_max) / 2).toFixed(2);
+  let avgWeight = (+data.weight_min + +data.weight_max) / 2;
+  avgWeight = (avgWeight / 2.205).toFixed(2);
 
-    info.innerHTML = `
+  info.innerHTML = `
     <!-- animals information start -->
     <div class="col-lg-7 col-sm-12">
       <div class="row mb-2">
@@ -85,7 +85,7 @@ async function animalsInfo(){
             <button type="button" id="next-btn" class="btn btn-link next" onClick="window.location.reload()">Next Creature</button>
           </div>
     <!-- button end -->
-    `
+    `;
 }
 
 animalsInfo();
