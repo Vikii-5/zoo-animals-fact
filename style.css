@@ -1,0 +1,111 @@
+:root {
+  --primary-font: "Boogaloo", cursive;
+  --secondary-font: "Montserrat", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url(images/bg-01.jpg);
+  background-size: cover;
+  background-position: center;
+  transition: all 0.7s ease;
+  color: white;
+}
+
+h2 {
+  font-family: var(--primary-font);
+  font-size: 3.5rem;
+}
+
+p {
+  margin: 0;
+  font-family: var(--primary-font);
+  font-size: 1.25rem;
+}
+
+small {
+  font-family: var(--secondary-font);
+  color: #22b573;
+  font-size: 0.85rem;
+}
+
+#main-container {
+  max-width: 80vw;
+}
+
+.heading-text {
+  color: #22b573;
+}
+
+.animal-name {
+  background-color: #121212;
+  border: 1px solid #22b573;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.animal-type,
+.active-time,
+.avg-length,
+.avg-weight,
+.habitat,
+.diet,
+.geo-range {
+  background-color: #121212;
+  border: 1px solid #22b573;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.animal-type,
+.active-time,
+.avg-length,
+.avg-weight {
+  width: 24%;
+}
+
+@media screen and (max-width: 767px) {
+    #info-row{
+        flex-direction: column;
+    }
+
+  .animal-type,
+  .active-time,
+  .avg-length,
+  .avg-weight {
+    width: 100%;
+    margin-bottom: .5rem;
+  }
+
+  .animal-img{
+    margin-top: 1rem;
+  }
+}
+
+.name-text {
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+    .animal-img{
+        height: 452px;
+    }
+}
+
+@media screen and (min-width: 1199px) {
+    .animal-img{
+        height: 428px;
+    }
+}
+
+.animal-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.next {
+  font-family: var(--primary-font);
+  font-size: 1.75rem;
+  color: #22b573;
+}
