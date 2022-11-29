@@ -7,6 +7,7 @@ async function animalsInfo() {
 
   let response = await fetch(URL, {
     method: "GET",
+    mode: 'cors'
   });
 
   let data = await response.json();
